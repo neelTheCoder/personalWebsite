@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Neel Ahuja</title>
+  <meta name="description" content="Writing by Neel Ahuja on AI, neurotechnology, and building things." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236b8c6e'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='Georgia,serif' fill='white' font-weight='700'>N</text></svg>" />
+  <style>
+    /* article modal overlay */
+    .article-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: var(--color-bg);
+      overflow-y: auto;
+      padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+    }
+    .article-overlay.open { display: block; }
+    .article-close {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-10);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: color var(--transition);
+    }
+    .article-close:hover { color: var(--color-primary); }
+    .writing-arrow {
+      color: var(--color-text-faint);
+      font-size: var(--text-sm);
+      transition: color var(--transition), transform var(--transition);
+    }
+    .writing-item:hover .writing-arrow {
+      color: var(--color-primary);
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Neel Ahuja</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="pursuits.html">pursuits</a></li>
+      <li><a href="quotes.html">quotes</a></li>
+      <li><a href="taste.html">taste</a></li>
+      <li><a href="bits.html">bits of life</a></li>
+      <li><a href="writing.html" class="active">writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content" id="writing-list-view">
+
+  <div class="pursuits-header">
+    <p class="page-label">Essays &amp; notes</p>
+    <h1 class="page-title">Writing</h1>
+    <p class="page-subtitle">Thinking out loud about AI, neurotechnology, and building things that matter.</p>
+  </div>
+
+  <div class="writing-list">
+
+    <div class="writing-item" onclick="openArticle('article-bci')" role="button" tabindex="0">
+      <div>
+        <p class="writing-title">Why General-Purpose BCIs are the Next Interface Paradigm</p>
+        <p class="writing-meta" style="margin-top: 4px; font-size: var(--text-xs); color: var(--color-text-faint);">10 min read</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--space-4);">
+        <span class="writing-meta">Apr 2026</span>
+        <span class="writing-arrow">→</span>
+      </div>
+    </div>
+
+    <div class="writing-item" onclick="openArticle('article-agents')" role="button" tabindex="0">
+      <div>
+        <p class="writing-title">Benchmarking AI Agents at Scale: What We Got Wrong</p>
+        <p class="writing-meta" style="margin-top: 4px; font-size: var(--text-xs); color: var(--color-text-faint);">8 min read</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--space-4);">
+        <span class="writing-meta">Mar 2026</span>
+        <span class="writing-arrow">→</span>
+      </div>
+    </div>
+
+    <div class="writing-item" onclick="openArticle('article-placebo')" role="button" tabindex="0">
+      <div>
+        <p class="writing-title">The Placebo Effect in Machine Learning Evaluation</p>
+        <p class="writing-meta" style="margin-top: 4px; font-size: var(--text-xs); color: var(--color-text-faint);">6 min read</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--space-4);">
+        <span class="writing-meta">Feb 2026</span>
+        <span class="writing-arrow">→</span>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ARTICLE: BCI -->
+<div class="article-overlay" id="article-bci">
+  <div class="article-content">
+    <button class="article-close" onclick="closeArticle('article-bci')">
+      ← back to writing
+    </button>
+    <header class="article-header">
+      <p class="page-label">Essay</p>
+      <h1 class="article-title">Why General-Purpose BCIs are the Next Interface Paradigm</h1>
+      <p class="article-meta">April 2026 · 10 min read</p>
+    </header>
+    <div class="article-body">
+      <p>
+        Every major interface shift — from command line to GUI, from desktop to mobile — followed the same arc: a technology that seemed niche became infrastructure. Brain-computer interfaces are next in line, and the question isn't whether they'll arrive but what shape they'll take when they do.
+      </p>
+      <h2>The problem with vertical BCIs</h2>
+      <p>
+        Most BCI companies today are built around a single application: restoring motor function, treating depression, enabling communication for ALS patients. This is important work. But it creates an ecosystem of siloed, application-specific systems that don't compose — a user can't take signal processing learned in one context and apply it to another.
+      </p>
+      <p>
+        General-purpose BCIs ask a different question: what if we built the underlying platform first, and let applications proliferate on top? This is the bet that made Android and iOS so powerful — not the apps themselves, but the substrate that made apps possible.
+      </p>
+      <h2>What "general purpose" actually means</h2>
+      <p>
+        A general-purpose BCI needs to do a few things well. It needs a hardware-agnostic signal processing layer that abstracts over EEG, fNIRS, and emerging modalities. It needs a low-latency decoding pipeline that can be tuned for different cognitive signals without retraining from scratch. And it needs an application interface — something like an OS API — that lets developers build BCI-native experiences without needing neuroscience PhDs.
+      </p>
+      <p>
+        Numa is an attempt at this substrate. We're not building the headset. We're building the software that makes the headset useful for more than one thing.
+      </p>
+      <h2>The timing question</h2>
+      <p>
+        Hardware isn't there yet — consumer-grade EEG is still noisy, fNIRS is awkward to wear, and invasive BCIs require surgery. But the software layer can be built now. The bottleneck isn't the signal quality of today's hardware; it's the absence of development infrastructure that would let people experiment with tomorrow's hardware cheaply. That's the gap worth filling.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE: Agents -->
+<div class="article-overlay" id="article-agents">
+  <div class="article-content">
+    <button class="article-close" onclick="closeArticle('article-agents')">
+      ← back to writing
+    </button>
+    <header class="article-header">
+      <p class="page-label">Essay</p>
+      <h1 class="article-title">Benchmarking AI Agents at Scale: What We Got Wrong</h1>
+      <p class="article-meta">March 2026 · 8 min read</p>
+    </header>
+    <div class="article-body">
+      <p>
+        When we set out to benchmark four AI coding agents across 350 real-world workflow tasks, we thought the hard part would be the infrastructure. We were wrong. The hard part was defining what "good" meant.
+      </p>
+      <h2>The rubric problem</h2>
+      <p>
+        Early in the project, we tried to evaluate agents on binary pass/fail: did the task complete or not? It seemed clean. It was useless. A task like "refactor this module to improve readability" doesn't have a binary answer. Two humans given the same output would disagree on whether it passed.
+      </p>
+      <p>
+        We ended up building a rubric-based LLM judging layer — a meta-model that evaluates agent outputs against structured criteria. This introduced its own problems: rubric quality, judge consistency, and the uncomfortable question of whether you're measuring the task or measuring the rubric.
+      </p>
+      <h2>What delivery rate actually tells you</h2>
+      <p>
+        The most useful metric we found wasn't accuracy — it was delivery rate: how often does the agent produce any coherent output at all? Agents that fail silently are more dangerous than agents that fail loudly. Measuring the shape of failure turned out to be more informative than measuring the rate of success.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE: Placebo -->
+<div class="article-overlay" id="article-placebo">
+  <div class="article-content">
+    <button class="article-close" onclick="closeArticle('article-placebo')">
+      ← back to writing
+    </button>
+    <header class="article-header">
+      <p class="page-label">Essay</p>
+      <h1 class="article-title">The Placebo Effect in Machine Learning Evaluation</h1>
+      <p class="article-meta">February 2026 · 6 min read</p>
+    </header>
+    <div class="article-body">
+      <p>
+        In medicine, the placebo effect is well understood: the act of treatment produces real outcomes independent of the treatment itself. In machine learning evaluation, there's an analogous phenomenon — and it's less well-studied.
+      </p>
+      <h2>When the benchmark shapes the model</h2>
+      <p>
+        Once a benchmark becomes widely used, models are optimized against it. The benchmark stops measuring the capability it was designed to measure and starts measuring benchmark performance. This is Goodhart's Law, but in ML it operates faster and at larger scale than anyone anticipated.
+      </p>
+      <p>
+        The fix isn't to build better benchmarks — it's to build benchmarks that are inherently hard to optimize against without actually improving the capability. Real-world workflow tasks, evaluated by rubric-based judges with high variance, are one approach. The goal is evaluation that can't be gamed, because gaming it would require actually solving the problem.
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Neel Ahuja · ahuja@stanford.edu · Stanford, CA</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('site-nav--scrolled', window.scrollY > 10);
+  });
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+  function openArticle(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById(id).scrollTop = 0;
+  }
+
+  function closeArticle(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // keyboard support
+  document.querySelectorAll('.writing-item').forEach(item => {
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') item.click();
+    });
+  });
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

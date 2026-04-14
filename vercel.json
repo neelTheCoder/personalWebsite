@@ -1,0 +1,31 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/style.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/pursuits",  "destination": "/pursuits.html" },
+    { "source": "/quotes",    "destination": "/quotes.html" },
+    { "source": "/taste",     "destination": "/taste.html" },
+    { "source": "/bits",      "destination": "/bits.html" },
+    { "source": "/writing",   "destination": "/writing.html" }
+  ]
+}

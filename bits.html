@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bits of Life — Neel Ahuja</title>
+  <meta name="description" content="Photos and moments from Neel Ahuja's life." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236b8c6e'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='Georgia,serif' fill='white' font-weight='700'>N</text></svg>" />
+  <style>
+    /* extra bits-specific styles */
+    .bits-caption {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      text-align: center;
+      margin-top: var(--space-2);
+      letter-spacing: 0.04em;
+    }
+    .bits-item { display: flex; flex-direction: column; }
+    .bits-item.large { grid-column: span 2; }
+    .bits-item.large .bits-photo { aspect-ratio: 16/7; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Neel Ahuja</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="pursuits.html">pursuits</a></li>
+      <li><a href="quotes.html">quotes</a></li>
+      <li><a href="taste.html">taste</a></li>
+      <li><a href="bits.html" class="active">bits of life</a></li>
+      <li><a href="writing.html">writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <div class="pursuits-header">
+    <p class="page-label">A life in fragments</p>
+    <h1 class="page-title">Bits of Life</h1>
+    <p class="page-subtitle">Moments worth keeping.</p>
+  </div>
+
+  <div class="bits-grid container--wide" style="max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6);">
+
+    <div class="bits-item large">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">somewhere worth being</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">stanford campus</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">lab life</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">early morning</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">bay area light</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">somewhere new</p>
+    </div>
+
+    <div class="bits-item large">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">views worth hiking for</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">building</p>
+    </div>
+
+    <div class="bits-item">
+      <div class="bits-photo">
+        <div class="bits-photo-placeholder">photo</div>
+      </div>
+      <p class="bits-caption">weekends</p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Neel Ahuja · ahuja@stanford.edu · Stanford, CA</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('site-nav--scrolled', window.scrollY > 10);
+  });
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

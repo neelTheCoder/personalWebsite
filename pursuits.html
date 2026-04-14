@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pursuits — Neel Ahuja</title>
+  <meta name="description" content="Work and projects by Neel Ahuja — AI research, ML consulting, and building Numa." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236b8c6e'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='Georgia,serif' fill='white' font-weight='700'>N</text></svg>" />
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Neel Ahuja</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="pursuits.html" class="active">pursuits</a></li>
+      <li><a href="quotes.html">quotes</a></li>
+      <li><a href="taste.html">taste</a></li>
+      <li><a href="bits.html">bits of life</a></li>
+      <li><a href="writing.html">writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <div class="pursuits-header">
+    <p class="page-label">Work &amp; Projects</p>
+    <h1 class="page-title">Pursuits</h1>
+    <p class="page-subtitle">
+      Things I've built, researched, and shipped. From NLP benchmarking frameworks to ML consulting pipelines — and right now, Numa.
+    </p>
+  </div>
+
+  <div class="pursuits-list">
+
+    <!-- Numa -->
+    <div class="pursuit-card pursuit-building">
+      <p class="pursuit-org">Currently Building</p>
+      <h2 class="pursuit-role">Numa</h2>
+      <div class="pursuit-meta">
+        <span class="pursuit-meta-tag">BCI Software</span>
+        <span class="pursuit-meta-tag">General Purpose</span>
+        <span class="pursuit-meta-tag">2025 – Present</span>
+      </div>
+      <ul class="pursuit-bullets">
+        <li>Developing software infrastructure for general-purpose brain-computer interfaces, focused on making BCI technology more accessible and interoperable across devices and use cases.</li>
+        <li>Exploring signal processing pipelines for EEG and fNIRS data, with emphasis on low-latency decoding and real-time human-computer interaction.</li>
+        <li>Building toward a platform that enables neurotechnology developers to ship BCI-native applications without deep hardware expertise.</li>
+      </ul>
+    </div>
+
+    <!-- SALT Lab -->
+    <div class="pursuit-card">
+      <p class="pursuit-org">SALT Lab · Stanford AI Lab (SAIL)</p>
+      <h2 class="pursuit-role">AI Research Intern</h2>
+      <div class="pursuit-meta">
+        <span>Palo Alto, CA</span>
+        <span>·</span>
+        <span>Dec 2025 – Present</span>
+        <span class="pursuit-meta-tag">Python</span>
+        <span class="pursuit-meta-tag">PyTorch</span>
+        <span class="pursuit-meta-tag">MongoDB</span>
+        <span class="pursuit-meta-tag">Docker</span>
+      </div>
+      <ul class="pursuit-bullets">
+        <li>Built an automated NLP benchmarking framework evaluating 4 AI agents (Codex, Gemini-CLI, Claude Code, Manus) across 350+ real-world workflow tasks, using rubric-based LLM judging and structured evaluation metrics.</li>
+        <li>Designed a ranking system with a MongoDB backend and RAG-automated grading, enabling standard model evaluation of new AI agents by analyzing delivery rates, reasoning, and output patterns — enhancing human-AI collaboration and data visualization.</li>
+        <li>Developed technical documentation using MkDocs for CoCo (Collaborative Cognitive Agent), a 40,000+ line monorepo enabling human-agent workflow collaboration — reducing developer onboarding time by 60% and presenting experimental design.</li>
+      </ul>
+    </div>
+
+    <!-- Databricks -->
+    <div class="pursuit-card">
+      <p class="pursuit-org">Databricks · Stanford Consulting</p>
+      <h2 class="pursuit-role">Machine Learning Consultant</h2>
+      <div class="pursuit-meta">
+        <span>Palo Alto, CA</span>
+        <span>·</span>
+        <span>Jan 2026 – Present</span>
+        <span class="pursuit-meta-tag">Pandas</span>
+        <span class="pursuit-meta-tag">scikit-learn</span>
+        <span class="pursuit-meta-tag">CI/CD</span>
+      </div>
+      <ul class="pursuit-bullets">
+        <li>Built an AI founder evaluation system that ingests LinkedIn profiles and resumes, extracting 20+ structured features using BERT embeddings and gradient boosting — generating explainable scores for 500+ startup founders.</li>
+        <li>Developed an automated review agent scoring 1,000+ AI+Data Summit submissions using classification and ranking models trained on historic data and external signals (LinkedIn, GitHub), reaching 92% tag accuracy and reducing manual review time by 70%.</li>
+        <li>Deployed production ML pipelines with Databricks Lakehouse integration and real-time dashboards for founder scoring and CFP ranking, featuring human-in-the-loop escalation, explainable AI insights, and bias monitoring for investments.</li>
+      </ul>
+    </div>
+
+    <!-- Newristics -->
+    <div class="pursuit-card">
+      <p class="pursuit-org">Newristics</p>
+      <h2 class="pursuit-role">Machine Learning Intern</h2>
+      <div class="pursuit-meta">
+        <span>Remote</span>
+        <span>·</span>
+        <span>June 2021 – Nov 2022</span>
+        <span class="pursuit-meta-tag">Python</span>
+        <span class="pursuit-meta-tag">PyTorch</span>
+        <span class="pursuit-meta-tag">NLP</span>
+        <span class="pursuit-meta-tag">Figma</span>
+      </div>
+      <ul class="pursuit-bullets">
+        <li>Built a random forest supervised learning model with 90% accuracy to classify 56 heuristics (psychological biases) in marketing messages — led 12 writers and leveraged generative AI to produce 5,000+ synthetic training messages.</li>
+        <li>Scored 1,000+ generated marketing messages from 6 leading LLM copywriting tools using NLP sentiment analysis algorithms, then proposed a multimodal integration strategy to improve generated message quality, speed, and scalability for 50+ clients.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Neel Ahuja · ahuja@stanford.edu · Stanford, CA</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('site-nav--scrolled', window.scrollY > 10);
+  });
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

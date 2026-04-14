@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes — Neel Ahuja</title>
+  <meta name="description" content="Quotes that Neel Ahuja keeps returning to." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%236b8c6e'/><text x='16' y='22' text-anchor='middle' font-size='18' font-family='Georgia,serif' fill='white' font-weight='700'>N</text></svg>" />
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Neel Ahuja</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="pursuits.html">pursuits</a></li>
+      <li><a href="quotes.html" class="active">quotes</a></li>
+      <li><a href="taste.html">taste</a></li>
+      <li><a href="bits.html">bits of life</a></li>
+      <li><a href="writing.html">writing</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <div class="pursuits-header">
+    <p class="page-label">Things worth holding onto</p>
+    <h1 class="page-title">Quotes</h1>
+    <p class="page-subtitle">Lines I keep returning to.</p>
+  </div>
+
+  <div class="quotes-grid">
+
+    <div class="quote-block">
+      <p class="quote-text">"The best way to predict the future is to invent it."</p>
+      <p class="quote-attr">— Alan Kay</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"A man who knows how will always have a job. A man who knows why will always be his boss."</p>
+      <p class="quote-attr">— Ralph Waldo Emerson</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"We are as gods and might as well get good at it."</p>
+      <p class="quote-attr">— Stewart Brand, Whole Earth Catalog</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"The mind is not a vessel to be filled, but a fire to be kindled."</p>
+      <p class="quote-attr">— Plutarch</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"The universe is under no obligation to make sense to you."</p>
+      <p class="quote-attr">— Neil deGrasse Tyson</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"Stay hungry. Stay foolish."</p>
+      <p class="quote-attr">— Steve Jobs, Stanford Commencement 2005</p>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"Everything is a computer. Biologists use computers to understand biology. Physicists use computers to understand physics. I just happen to like using biology to understand computation."</p>
+      <p class="quote-attr">— Christof Koch</p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Neel Ahuja · ahuja@stanford.edu · Stanford, CA</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('site-nav--scrolled', window.scrollY > 10);
+  });
+  const toggle = document.getElementById('nav-toggle');
+  const links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
