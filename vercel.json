@@ -27,5 +27,8 @@
     { "source": "/taste",     "destination": "/taste.html" },
     { "source": "/bits",      "destination": "/bits.html" },
     { "source": "/writing",   "destination": "/writing.html" }
+  ],
+  "redirects": [
+    { "source": "/scholar",   "destination": "https://scholar.google.com/citations?user=HmP7D2EAAAAJ&hl=en&oi=sra", "permanent": false }
   ]
 }
